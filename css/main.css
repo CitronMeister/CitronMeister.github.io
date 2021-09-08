@@ -30,6 +30,9 @@ p {
     color: white;
     
 }
+.p-center {
+    text-align: center;
+}
 
 a {
 	color: #FF6;
