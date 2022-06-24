@@ -12,11 +12,11 @@ jQuery(function($) {
     
     $(document).ready( function() {
 
-        loadGoogleMap();
+        // loadGoogleMap();
         
         // backstretch for background image
-        var defaultImgSrc = $('img.main-img').attr('src');
-        $.backstretch(defaultImgSrc, {speed: 400});
+        // var defaultImgSrc = $('img.main-img').attr('src');
+        // $.backstretch(defaultImgSrc, {speed: 400});
 
 	//for image slide on menu item click(normal) and responsive
 	$(".change-section").on('click',function(e){
@@ -28,8 +28,8 @@ jQuery(function($) {
                 var name = $(this).attr('href');
                 console.log(name);
                 // get image url and assign to backstretch for background
-                var imgSrc = $("img"+name+"-img").attr('src');
-                $.backstretch(imgSrc, {speed: 400}); //backstretch for background fade in/out
+                // var imgSrc = $("img"+name+"-img").attr('src');
+                // $.backstretch(imgSrc, {speed: 400}); //backstretch for background fade in/out
                 
                 // content zoom in/out
                 $("section.active").hide('size',{easing: 'easeInQuart', duration: 400},function(){
@@ -38,8 +38,8 @@ jQuery(function($) {
                         $(this).addClass("active");
                         
                         // google map need to resize for animate contents
-                        google.maps.event.trigger(map, 'resize'); // resize map
-                        $.backstretch("resize"); // resize the background image
+                        // google.maps.event.trigger(map, 'resize'); // resize map
+                        // $.backstretch("resize"); // resize the background image
                         menuDisabled = false;
                      });
                 });                
@@ -53,19 +53,19 @@ jQuery(function($) {
 
 var map = '';
 
-function initialize() {
-    var mapOptions = {
-      zoom: 14,
-      center: new google.maps.LatLng(16.8496189,96.1288854)
-    };
-    map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
-}
+// function initialize() {
+//     var mapOptions = {
+//       zoom: 14,
+//       center: new google.maps.LatLng(16.8496189,96.1288854)
+//     };
+//     map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
+// }
 
-function loadGoogleMap(){
-    // load google map
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-        'callback=initialize';
-    document.body.appendChild(script);
-}
+// function loadGoogleMap(){
+//     // load google map
+//     var script = document.createElement('script');
+//     script.type = 'text/javascript';
+//     script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+//         'callback=initialize';
+//     document.body.appendChild(script);
+// }
