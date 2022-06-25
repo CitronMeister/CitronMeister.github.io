@@ -3,30 +3,6 @@ CSS Main file
     Treasure Hunt time!
 */
 
-html, body {
-  width: 100%;
-  height:100%;
-}
-
-body {
-    background: linear-gradient(-45deg, #40E0D0, #FF8C00, #FF0080);
-    background-size: 400% 400%;
-    animation: gradient 25s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
 body, html { overflow-x:hidden; }
 
 body {
@@ -106,9 +82,6 @@ img {
 #main-wrapper {
      overflow: hidden;
 }
-.container {
-    margin: 200px;
-}
 
 .logo {
 	z-index: 1;
@@ -156,7 +129,7 @@ img.slide {
 }
 
 .content {
-    position:relative;
+    position: static;
     overflow: hidden; 
     margin-top: 20%;
     padding-bottom: 6%;
