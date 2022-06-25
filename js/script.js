@@ -1,4 +1,4 @@
-
+// Javascript for update!
 
 var menuDisabled = false;
 
